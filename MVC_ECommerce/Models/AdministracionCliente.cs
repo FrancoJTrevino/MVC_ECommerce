@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace MVC_ECommerce.Models
 {
-    public class AdministracionCliente : ViewModelBase
+    public class AdministracionCliente
     {
         private SqlConnection con;
 
