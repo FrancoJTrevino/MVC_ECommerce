@@ -2,9 +2,8 @@
 @{
     ViewBag.Title = " - Sesion Iniciada";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Sesion = Model;
 }
 
-<h2>Sesión Iniciada con Éxito</h2>
-<p>@ViewBag.Sesion</p>
+@{if(ViewBag.Sesion == true){<h2>Sesión Iniciada con Éxito</h2>}else{<h2>Error al iniciar sesión, intente nuevamente</h2>}}
 
+<a href="~/Home/Index?sesion=@(ViewBag.Sesion.ToString())"><button style="margin-bottom:1%;" id="btnCrearCuenta" class="btn btn-outline-primary">Volver al Inicio</button></a>

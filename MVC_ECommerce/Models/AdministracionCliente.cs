@@ -7,14 +7,14 @@ using System.Data.SqlClient;
 
 namespace MVC_ECommerce.Models
 {
-    public class AdministracionCliente
+    public class AdministracionCliente : ViewModelBase
     {
         private SqlConnection con;
 
         private void Conectar()
         {
             //Crea una conexion a la base de datos
-            string constr = "Data Source = ********************; Initial Catalog = ECommerce; Integrated Security = True";
+            string constr = "Data Source = ***************; Initial Catalog = ECommerce; Integrated Security = True";
             con = new SqlConnection(constr);
         }
 

@@ -1,20 +1,39 @@
-﻿<!DOCTYPE html>
+﻿@model bool
+@{ var x = ViewBag.Sesion;}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="~/Home/Index">
-                <img src="https://i.imgur.com/xkk2BYw.png" width="30" height="30" class="d-inline-block align-top ml-auto" alt="logo"> ECommerce
-            </a>
+            @{if (x == true)
+                {
+                    <a class="navbar-brand" href="~/Home/Index?sesion=True">
+                        <img src="https://i.imgur.com/xkk2BYw.png" width="30" height="30" class="d-inline-block align-top ml-auto" alt="logo"> ECommerce
+                    </a>
+                }
+                else
+                {
+                    <a class="navbar-brand" href="~/Home/Index">
+                        <img src="https://i.imgur.com/xkk2BYw.png" width="30" height="30" class="d-inline-block align-top ml-auto" alt="logo"> ECommerce
+                    </a>
+                }}            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="~/Home/Index">Inicio</a>
+                        @{if (x == true)
+                            {
+                                <a class="nav-link" href="~/Home/Index?sesion=True">Inicio</a>
+                            }
+                            else
+                            {
+                                <a class="nav-link" href="~/Home/Index">Inicio</a>
+                            }}
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Productos</a>
@@ -55,7 +74,10 @@
                     <button type="button" class="btn btn-outline-success" id="buttonBuscar">Buscar</button>
                 </div>
                 <hr style="margin: 0.5%; color: #F8F9FA"/>
-                <a class="btn btn-primary" href="~/Home/InicioSesion" role="button" id="inicioSesion" style="max-height: 38px; width:10%; font-size:0.95vw;">Iniciar Sesión</a>
+                @{if(x==true){
+                    <a class="btn btn-primary" href="~/Home/InicioSesion" role="button" id="inicioSesion" style="max-height: 38px; width:10%; font-size:0.95vw;" disabled>Sesión Iniciada</a>}
+                else{
+                    <a class="btn btn-primary" href="~/Home/InicioSesion" role="button" id="inicioSesion" style="max-height: 38px; width:10%; font-size:0.95vw;">Iniciar Sesión</a>}}
             </div>
         </nav>
     </header>

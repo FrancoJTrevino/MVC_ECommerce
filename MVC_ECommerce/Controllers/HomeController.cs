@@ -10,9 +10,11 @@ namespace MVC_ECommerce.Controllers
     public class HomeController : Controller
     {
         // GET: Home
-        public ActionResult Index()
+        public ActionResult Index(bool sesion = false)
         {
-            return View();
+            ViewBag.Sesion = sesion;
+            RedirectToAction("_Header", sesion);
+            return View(sesion);
         }
         public ActionResult InicioSesion()
         {
@@ -55,6 +57,7 @@ namespace MVC_ECommerce.Controllers
         {
             return View();
         }
+        public bool sesionIniciada;
         [HttpPost]
         public ActionResult IniciarSesion(FormCollection coleccion)
         {
@@ -68,18 +71,26 @@ namespace MVC_ECommerce.Controllers
 
             if(ac.IniciarSesion(usuario) == true)
             {
-                x = "SesionIniciada";
+                x = "_Header";
+                sesionIniciada = true;
             }
             else
             {
                 x = "InicioSesion";
+                sesionIniciada = false;
             }
-            return RedirectToAction(x);
+            return RedirectToAction(x, new { sesion = true});
         }
-        public ActionResult SesionIniciada()
+        public ActionResult SesionIniciada(bool sesion = false)
         {
-
-            return View();
+            ViewBag.Sesion = sesion;
+            return View(sesion);
+        }
+        public ActionResult _Header(bool sesion)
+        {
+            ViewBag.Sesion = sesion;
+            PartialView(sesion);
+            return RedirectToAction("SesionIniciada", new { sesion = sesion });
         }
     }
 }

@@ -132,6 +132,7 @@
     <Compile Include="Models\Empresa.cs" />
     <Compile Include="Models\Persona.cs" />
     <Compile Include="Models\Producto.cs" />
+    <Compile Include="Models\ViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

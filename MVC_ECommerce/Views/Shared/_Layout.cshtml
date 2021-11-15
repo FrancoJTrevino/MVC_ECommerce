@@ -13,15 +13,15 @@
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <script src="~/Scripts/bootstrap.js"></script>
 </head>
-<header>
-    @Html.Partial("_Header")
-</header>
 <body>
+    <header>
+        @Html.Partial("_Header", true)
+    </header>
     <main>
         @RenderBody()
     </main>
+    <footer>
+        @Html.Partial("_Footer")
+    </footer>
 </body>
-<footer>
-    @Html.Partial("_Footer")
-</footer>
 </html>
