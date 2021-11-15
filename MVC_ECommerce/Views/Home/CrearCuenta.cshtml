@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = " - Crear Cuenta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div style="text-align:center;">
+        <form method="post" action="/Home/CrearCuenta">
+            <p>Nombre de usuario: <br /><input name="inputUsuario" type="text" /></p>
+            <p>Contraseña: <br /><input name="inputContra" type="password" /></p>
+            <p>Nombre: <br /><input name="inputNombre" type="text" /></p>
+            <p>Apellido: <br /><input name="inputApellido" type="text" /></p>
+            <p>Fecha de Nacimiento: <br /><input name="inputFechaNacimiento" type="date" /></p>
+            <p>CUIL: <br /><input name="inputCUIL" type="number" /></p>
+            <p>Mail: <br /><input name="inputMail" type="text" /></p>
+            <p>Telefono de contacto: <br /><input name="inputTelefono" type="number" /></p>
+            <p>Dirección: <br /><input name="inputDireccion" type="text" /></p>
+            <input style="margin-bottom:1%;" type="submit" value="Crear Usuario" class="btn btn-primary" />
+        </form>
+    </div>

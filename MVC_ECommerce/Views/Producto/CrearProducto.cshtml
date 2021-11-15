@@ -1,0 +1,88 @@
+﻿@using MVC_ECommerce.Models;
+@{
+    ViewBag.Title = " - Crear Producto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var a = new AdministracionProducto();
+    var b = a.NombreEmpresa().Count();
+    var i = 0;
+    <script>
+        function myFunction() {
+            let x = document.getElementById("selectEmpresa").value;
+            let y = document.getElementsByClassName("datosEmpresaNueva");
+            if (x == "CrearNueva") {
+                for (var i = 0; i < y.length; i++) {
+                    y[i].style.visibility = "visible";
+                    document.getElementById("inputNombreEmp").disabled = false;
+                    document.getElementById("inputCUIT").disabled = false;
+                    document.getElementById("inputMail").disabled = false;
+                    document.getElementById("inputTelefono").disabled = false;
+                    document.getElementById("inputDireccion").disabled = false;
+                }
+            } else {
+                for (var i = 0; i < y.length; i++) {
+                    y[i].style.visibility = "hidden";
+                    document.getElementById("inputNombreEmp").disabled = true;
+                    document.getElementById("inputCUIT").disabled = true;
+                    document.getElementById("inputMail").disabled = true;
+                    document.getElementById("inputTelefono").disabled = true;
+                    document.getElementById("inputDireccion").disabled = true;
+                }
+            }
+        }
+    </script>
+}
+<div style="text-align:center">
+    <br />
+    <form method="post" action="/Producto/CrearProducto">
+        <div class="container">
+            <div class="row">
+                <p class="col-3"></p>
+                <p class="col-2">Nombre del producto: <br /><input name="inputNombre" type="text" required /></p>
+                <p class="col-2"></p>
+                <p class="col-2">
+                    Empresa Proveedora: <br />
+                    <select id="selectEmpresa" name="selectEmpresa" onchange="myFunction()">
+                        @while (b > i){<option class="optionEmpresa" value="@(a.NombreEmpresa()[i].Nombre)">@{@(a.NombreEmpresa()[i].Nombre); i++;}</option>}
+                        <option class="optionEmpresa" value="CrearNueva" selected>Inserte una empresa nueva</option>
+                    </select>
+                </p>
+            </div>
+            <div class="row">
+                <p class="col-3"></p>
+                <p class="col-2">Detalles:<br /><textarea name="inputDetalles" rows="4" cols="23" required></textarea></p>
+                <p class="col-2"></p>
+                <p class="col-2 datosEmpresaNueva" style="margin-top:5.5%;">Nombre Empresa: <br /><input name="inputNombreEmp" type="text" id="inputNombreEmp" required /></p>
+            </div>
+            <div class="row">
+                <p class="col-3"></p>
+                <p class="col-2">Stock: <br /><input name="inputStock" type="number" required /></p>
+                <p class="col-2"></p>
+                <p class="col-2 datosEmpresaNueva">CUIT Empresa: <br /><input name="inputCUIT" type="text" id="inputCUIT" required /></p>
+            </div>
+            <div class="row">
+                <p class="col-3"></p>
+                <p class="col-2">Precio Costo: <br /><input name="inputPrecioCosto" type="number" required /></p>
+                <p class="col-2"></p>
+                <p class="col-2 datosEmpresaNueva">Mail: <br /><input name="inputMail" type="text" id="inputMail" required /></p>
+            </div>
+            <div class="row">
+                <p class="col-3"></p>
+                <p class="col-2">Margen: <br /><input name="inputMargen" type="number" required /></p>
+                <p class="col-2"></p>
+                <p class="col-2 datosEmpresaNueva">Telefono de contacto: <br /><input name="inputTelefono" type="number" id="inputTelefono" required /></p>
+            </div>
+            <div class="row">
+                <p class="col-3"></p>
+                <p class="col-2">Tipo de Componente: <br /><input name="inputTipo" type="text" required /></p>
+                <p class="col-2"></p>
+                <p class="col-2 datosEmpresaNueva">Dirección: <br /><input name="inputDireccion" type="text" id="inputDireccion" required /></p>
+            </div>
+            <div class="row">
+                <p class="col-3"></p>
+                <p class="col-2">Marca: <br /><input name="inputMarca" type="text" required /></p>
+                <p class="col-2"></p>
+            </div>
+        </div>
+        <input type="submit" value="Crear Producto" class="btn btn-primary" style="margin-bottom:1%;" />
+    </form>
+</div>

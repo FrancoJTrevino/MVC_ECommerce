@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="~/Home/Index">
+                <img src="https://i.imgur.com/xkk2BYw.png" width="30" height="30" class="d-inline-block align-top ml-auto" alt="logo"> ECommerce
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="~/Home/Index">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Productos</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <!--<a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>-->
+                            <div class="dropdown-item" role="button">
+                                <a class="nav-link" href="/Producto/ListaProductos" aria-expanded="false">Todos</a>
+                            </div>
+                            <div class="dropdown-item dropend" role="button">
+                                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">Microprocesadores</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">AMD</a>
+                                    <a class="dropdown-item" href="#">Intel</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-item dropend" role="button">
+                                <a class="nav-link dropdown-toggle" href="#" aria-expanded="false" data-bs-toggle="dropdown" data-bs-auto-close="outside">Placas de video</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">AMD</a>
+                                    <a class="dropdown-item" href="#">Nvidia</a>
+                                </div>
+                            </div>
+                            <div class="dropdown-item dropend" role="button">
+                                <a class="nav-link dropdown-toggle" href="#" aria-expanded="false" data-bs-toggle="dropdown" data-bs-auto-close="outside">Motherboard</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">AMD</a>
+                                    <a class="dropdown-item" href="#">Intel</a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="input-group" style="width:50%; margin-right: 20%;">
+                    <input type="text" class="form-control" placeholder="Buscar..." aria-label="Buscar" aria-describedby="buttonBuscar" />
+                    <button type="button" class="btn btn-outline-success" id="buttonBuscar">Buscar</button>
+                </div>
+                <hr style="margin: 0.5%; color: #F8F9FA"/>
+                <a class="btn btn-primary" href="~/Home/InicioSesion" role="button" id="inicioSesion" style="max-height: 38px; width:10%; font-size:0.95vw;">Iniciar Sesión</a>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>

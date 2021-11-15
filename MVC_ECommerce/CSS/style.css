@@ -1,0 +1,27 @@
+﻿.divProducto {
+    margin-right: 1.5%;
+    width: 15%;
+    background-color: white;
+    float: left;
+}
+.divLogo {
+    text-align: center;
+}
+
+.logo {
+    margin-top: 2%;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+main {
+    background-color: #EBEBEB;
+}
+.optionEmpresa{
+    text-align:center;
+}
+.empresaP{
+    visibility:hidden;
+}

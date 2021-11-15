@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = " - Iniciar Sesion";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <div style="text-align:center;">
+        <form method="post" action="/Home/IniciarSesion">
+            <p style="padding-top:1%;">Ingrese su nombre de usuario: <br /><input name="inputUsuario" type="text" placeholder="Usuario o email" /></p>
+            <p>Ingrese su contraseña: <br /><input name="inputPassword" type="password" /></p>
+            <input type="submit" value="Iniciar Sesion" class="btn btn-success" />
+        </form>
+    </div>
+    <hr />
+    <div style="text-align:center;">
+        <p><i>¿Aún no tiene una cuenta?</i></p>
+        <a href="~/Home/CrearCuenta"><button style="margin-bottom:1%;" id="btnCrearCuenta" class="btn btn-outline-primary">Crear Cuenta</button></a>
+    </div>

@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>E-Commerce @ViewBag.Title</title>
+    <link href="~/CSS/style.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<header>
+    @Html.Partial("_Header")
+</header>
+<body>
+    <main>
+        @RenderBody()
+    </main>
+</body>
+<footer>
+    @Html.Partial("_Footer")
+</footer>
+</html>

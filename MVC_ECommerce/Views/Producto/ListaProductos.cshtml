@@ -1,0 +1,220 @@
+﻿
+@{
+    ViewBag.Title = " - ListaProductos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var a = new MVC_ECommerce.Models.AdministracionProducto();
+    var b = a.NombreProducto().Count();
+    var c = "S/N";
+    var i = 0;
+}
+<div>
+    <div>
+        <h1 style="text-align:center">Productos</h1>
+    </div>
+
+    <div style="float:left; border:solid 1px black; padding-left:1%; padding-right:2%; margin-left:0.5%; margin-top:1.5%">
+        <h3>Filtro</h3>
+        <ul>
+            <li>11111111111111111111</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+            <li>9</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+            <li>0</li>
+        </ul>
+    </div>
+    <div class="divProducto" style="margin-top:1.5%; margin-left:1%">
+        <div style="text-align: center; position:relative">
+            <a href="#"><img src="https://i.imgur.com/ZXqRsYV.jpg" width="80%" alt="ryzen 9 5900x"></a>
+            <a target="_blank" href="#"><img src="https://i.imgur.com/QI7PIlq.png" width="15%" style="position:absolute; right:3%; top: 3%;" /></a>
+        </div>
+        <hr style="margin:0em">
+        <div>
+            <p style="text-align: center;color:limegreen; margin-bottom: 0%; font-size: 1vw;"><a href="#" style="text-decoration: none; color:black">@{if (b > i){@(a.NombreProducto()[i].Nombre)}else{@(c)};}</a>
+            <br>$@{if (b > i){@(a.PrecioProducto()[i].PrecioNetoGet.ToString()); i++;}else{@(c)};}</p>
+        </div>
+    </div>
+    <div class="divProducto" style="margin-top:1.5%;">
+        <div style="text-align: center; position:relative">
+            <a href="#"><img src="https://i.imgur.com/ZXqRsYV.jpg" width="80%" alt="ryzen 9 5900x"></a>
+            <a target="_blank" href="#"><img src="https://i.imgur.com/QI7PIlq.png" width="15%" style="position:absolute; right:3%; top: 3%;" /></a>
+        </div>
+        <hr style="margin:0em">
+        <div>
+            <p style="text-align: center;color:limegreen; margin-bottom: 0%; font-size: 1vw;"><a href="#" style="text-decoration: none; color:black">@{if (b > i){@(a.NombreProducto()[i].Nombre)}else{@(c)};}</a>
+            <br>$@{if (b > i){@(a.PrecioProducto()[i].PrecioNetoGet.ToString()); i++;}else{@(c)};}
+            </p>
+        </div>
+    </div>
+    <div class="divProducto" style="margin-top:1.5%;">
+        <div style="text-align: center; position:relative">
+            <a href="#"><img src="https://i.imgur.com/ZXqRsYV.jpg" width="80%" alt="ryzen 9 5900x"></a>
+            <a target="_blank" href="#"><img src="https://i.imgur.com/QI7PIlq.png" width="15%" style="position:absolute; right:3%; top: 3%;" /></a>
+        </div>
+        <hr style="margin:0em">
+        <div>
+            <p style="text-align: center;color:limegreen; margin-bottom: 0%; font-size: 1vw;"><a href="#" style="text-decoration: none; color:black">@{if (b > i){@(a.NombreProducto()[i].Nombre)}else{@(c)};}</a>
+            <br>$@{if (b > i){@(Convert.ToInt32(a.PrecioProducto()[i].PrecioNetoGet)); i++;} else {@(c)};}</p>
+        </div>
+    </div>
+    <div class="divProducto" style="margin-top:1.5%;">
+        <div style="text-align: center; position:relative">
+            <a href="#"><img src="https://i.imgur.com/ZXqRsYV.jpg" width="80%" alt="ryzen 9 5900x"></a>
+            <a target="_blank" href="#"><img src="https://i.imgur.com/QI7PIlq.png" width="15%" style="position:absolute; right:3%; top: 3%;" /></a>
+        </div>
+        <hr style="margin:0em">
+        <div>
+            <p style="text-align: center;color:limegreen; margin-bottom: 0%; font-size: 1vw;"><a href="#" style="text-decoration: none; color:black">@{if (b > i){@(a.NombreProducto()[i].Nombre)}else{@(c)};}</a>
+            <br>$@{if (b > i){@(Convert.ToInt32(a.PrecioProducto()[i].PrecioNetoGet)); i++;} else {@(c)};}</p>
+        </div>
+    </div>
+    <div class="divProducto" style="margin-top:1.5%;">
+        <div style="text-align: center; position:relative">
+            <a href="#"><img src="https://i.imgur.com/ZXqRsYV.jpg" width="80%" alt="ryzen 9 5900x"></a>
+            <a target="_blank" href="#"><img src="https://i.imgur.com/QI7PIlq.png" width="15%" style="position:absolute; right:3%; top: 3%;" /></a>
+        </div>
+        <hr style="margin:0em">
+        <div>
+            <p style="text-align: center;color:limegreen; margin-bottom: 0%; font-size: 1vw;"><a href="#" style="text-decoration: none; color:black">@{if (b > i){@(a.NombreProducto()[i].Nombre)}else{@(c)};}</a>
+            <br>$@{if (b > i){@(Convert.ToInt32(a.PrecioProducto()[i].PrecioNetoGet)); i++;}else{@(c)};}</p>
+        </div>
+    </div>
+    <div class="divProducto" style="margin-top:1.5%; margin-left:1%">
+        <div style="text-align: center; position:relative">
+            <a href="#"><img src="https://i.imgur.com/ZXqRsYV.jpg" width="80%" alt="ryzen 9 5900x"></a>
+            <a target="_blank" href="#"><img src="https://i.imgur.com/QI7PIlq.png" width="15%" style="position:absolute; right:3%; top: 3%;" /></a>
+        </div>
+        <hr style="margin:0em">
+        <div>
+            <p style="text-align: center;color:limegreen; margin-bottom: 0%; font-size: 1vw;"><a href="#" style="text-decoration: none; color:black">@{if (b > i){@(a.NombreProducto()[i].Nombre)}else{@(c)};}</a>
+            <br>$@{if (b > i){@(Convert.ToInt32(a.PrecioProducto()[i].PrecioNetoGet)); i++;}else{@(c)};}</p>
+        </div>
+    </div>
+    <div class="divProducto" style="margin-top:1.5%;">
+        <div style="text-align: center; position:relative">
+            <a href="#"><img src="https://i.imgur.com/ZXqRsYV.jpg" width="80%" alt="ryzen 9 5900x"></a>
+            <a target="_blank" href="#"><img src="https://i.imgur.com/QI7PIlq.png" width="15%" style="position:absolute; right:3%; top: 3%;" /></a>
+        </div>
+        <hr style="margin:0em">
+        <div>
+            <p style="text-align: center;color:limegreen; margin-bottom: 0%; font-size: 1vw;"><a href="#" style="text-decoration: none; color:black">@{if (b > i){@(a.NombreProducto()[i].Nombre)}else{@(c)};}</a>
+            <br>$@{if (b > i){@(Convert.ToInt32(a.PrecioProducto()[i].PrecioNetoGet)); i++;}else{@(c)};}</p>
+        </div>
+    </div>
+    <div class="divProducto" style="margin-top:1.5%;">
+        <div style="text-align: center; position:relative">
+            <a href="#"><img src="https://i.imgur.com/ZXqRsYV.jpg" width="80%" alt="ryzen 9 5900x"></a>
+            <a target="_blank" href="#"><img src="https://i.imgur.com/QI7PIlq.png" width="15%" style="position:absolute; right:3%; top: 3%;" /></a>
+        </div>
+        <hr style="margin:0em">
+        <div>
+            <p style="text-align: center;color:limegreen; margin-bottom: 0%; font-size: 1vw;"><a href="#" style="text-decoration: none; color:black">@{if (b > i){@(a.NombreProducto()[i].Nombre)}else{@(c)};}</a>
+            <br>$@{if (b > i){@(Convert.ToInt32(a.PrecioProducto()[i].PrecioNetoGet)); i++;}else{@(c)};}</p>
+        </div>
+    </div>
+    <div class="divProducto" style="margin-top:1.5%;">
+        <div style="text-align: center; position:relative">
+            <a href="#"><img src="https://i.imgur.com/ZXqRsYV.jpg" width="80%" alt="ryzen 9 5900x"></a>
+            <a target="_blank" href="#"><img src="https://i.imgur.com/QI7PIlq.png" width="15%" style="position:absolute; right:3%; top: 3%;" /></a>
+        </div>
+        <hr style="margin:0em">
+        <div>
+            <p style="text-align: center;color:limegreen; margin-bottom: 0%; font-size: 1vw;"><a href="#" style="text-decoration: none; color:black">@{if (b > i){@(a.NombreProducto()[i].Nombre)}else{@(c)};}</a>
+            <br>$@{if (b > i){@(Convert.ToInt32(a.PrecioProducto()[i].PrecioNetoGet)); i++;}else{@(c)};}</p>
+        </div>
+    </div>
+    <div class="divProducto" style="margin-top:1.5%;">
+        <div style="text-align: center; position:relative">
+            <a href="#"><img src="https://i.imgur.com/ZXqRsYV.jpg" width="80%" alt="ryzen 9 5900x"></a>
+            <a target="_blank" href="#"><img src="https://i.imgur.com/QI7PIlq.png" width="15%" style="position:absolute; right:3%; top: 3%;" /></a>
+        </div>
+        <hr style="margin:0em">
+        <div>
+            <p style="text-align: center;color:limegreen; margin-bottom: 0%; font-size: 1vw;"><a href="#" style="text-decoration: none; color:black">@{if (b > i){@(a.NombreProducto()[i].Nombre)}else{@(c)};}</a>
+            <br>$@{if (b > i){@(Convert.ToInt32(a.PrecioProducto()[i].PrecioNetoGet)); i++;}else{@(c)};}</p>
+        </div>
+    </div>
+    <div class="divProducto" style="margin-top:1.5%; margin-left:1%">
+        <div style="text-align: center; position:relative">
+            <a href="#"><img src="https://i.imgur.com/ZXqRsYV.jpg" width="80%" alt="ryzen 9 5900x"></a>
+            <a target="_blank" href="#"><img src="https://i.imgur.com/QI7PIlq.png" width="15%" style="position:absolute; right:3%; top: 3%;" /></a>
+        </div>
+        <hr style="margin:0em">
+        <div>
+            <p style="text-align: center;color:limegreen; margin-bottom: 0%; font-size: 1vw;"><a href="#" style="text-decoration: none; color:black">@{if (b > i){@(a.NombreProducto()[i].Nombre)}else{@(c)};}</a>
+            <br>$@{if (b > i){@(Convert.ToInt32(a.PrecioProducto()[i].PrecioNetoGet)); i++;}else{@(c)};}</p>
+        </div>
+    </div>
+    <div class="divProducto" style="margin-top:1.5%;">
+        <div style="text-align: center; position:relative">
+            <a href="#"><img src="https://i.imgur.com/ZXqRsYV.jpg" width="80%" alt="ryzen 9 5900x"></a>
+            <a target="_blank" href="#"><img src="https://i.imgur.com/QI7PIlq.png" width="15%" style="position:absolute; right:3%; top: 3%;" /></a>
+        </div>
+        <hr style="margin:0em">
+        <div>
+            <p style="text-align: center;color:limegreen; margin-bottom: 0%; font-size: 1vw;"><a href="#" style="text-decoration: none; color:black">@{if (b > i){@(a.NombreProducto()[i].Nombre)}else{@(c)};}</a>
+            <br>$@{if (b > i){@(Convert.ToInt32(a.PrecioProducto()[i].PrecioNetoGet)); i++;}else{@(c)};}</p>
+        </div>
+    </div>
+    <div class="divProducto" style="margin-top:1.5%;">
+        <div style="text-align: center; position:relative">
+            <a href="#"><img src="https://i.imgur.com/ZXqRsYV.jpg" width="80%" alt="ryzen 9 5900x"></a>
+            <a target="_blank" href="#"><img src="https://i.imgur.com/QI7PIlq.png" width="15%" style="position:absolute; right:3%; top: 3%;" /></a>
+        </div>
+        <hr style="margin:0em">
+        <div>
+            <p style="text-align: center;color:limegreen; margin-bottom: 0%; font-size: 1vw;"><a href="#" style="text-decoration: none; color:black">@{if (b > i){@(a.NombreProducto()[i].Nombre)}else{@(c)};}</a>
+            <br>$@{if (b > i){@(Convert.ToInt32(a.PrecioProducto()[i].PrecioNetoGet)); i++;}else{@(c)};}</p>
+        </div>
+    </div>
+    <div class="divProducto" style="margin-top:1.5%;">
+        <div style="text-align: center; position:relative">
+            <a href="#"><img src="https://i.imgur.com/ZXqRsYV.jpg" width="80%" alt="ryzen 9 5900x"></a>
+            <a target="_blank" href="#"><img src="https://i.imgur.com/QI7PIlq.png" width="15%" style="position:absolute; right:3%; top: 3%;" /></a>
+        </div>
+        <hr style="margin:0em">
+        <div>
+            <p style="text-align: center;color:limegreen; margin-bottom: 0%; font-size: 1vw;"><a href="#" style="text-decoration: none; color:black">@{if (b > i){@(a.NombreProducto()[i].Nombre)}else{@(c)};}</a>
+            <br>$@{if (b > i){@(Convert.ToInt32(a.PrecioProducto()[i].PrecioNetoGet)); i++;}else{@(c)};}</p>
+        </div>
+    </div>
+    <div class="divProducto" style="margin-top:1.5%;">
+        <div style="text-align: center; position:relative">
+            <a href="#"><img src="https://i.imgur.com/ZXqRsYV.jpg" width="80%" alt="ryzen 9 5900x"></a>
+            <a target="_blank" href="#"><img src="https://i.imgur.com/QI7PIlq.png" width="15%" style="position:absolute; right:3%; top: 3%;" /></a>
+        </div>
+        <hr style="margin:0em">
+        <div>
+            <p style="text-align: center;color:limegreen; margin-bottom: 0%; font-size: 1vw;"><a href="#" style="text-decoration: none; color:black">@{if (b > i){@(a.NombreProducto()[i].Nombre)}else{@(c)};}</a>
+            <br>$@{if (b > i){@(Convert.ToInt32(a.PrecioProducto()[i].PrecioNetoGet)); i++;}else{@(c)};}</p>
+        </div>
+    </div>
+</div>
