@@ -14,7 +14,7 @@ namespace MVC_ECommerce.Models
         private void Conectar()
         {
             //Crea una conexion a la base de datos
-            string constr = "Data Source = DESKTOP-PH3T3KJ\\SQLEXPRESS; Initial Catalog = ECommerce; Integrated Security = True";
+            string constr = "Data Source = ********************; Initial Catalog = ECommerce; Integrated Security = True";
             con = new SqlConnection(constr);
         }
 
